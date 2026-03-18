@@ -67,37 +67,37 @@ define :array do
   end
 end
 
-  live_loop :bass do
-    use_synth :bass_foundation
-    measure1
-  end
-  
-  sleep 8
-  
-  live_loop :piano do
-    use_synth :piano
-    measure2
-    stop
-  end
-  
-  sleep 8
-  
-  live_loop :bell do
-    use_synth :dull_bell
-    array
-  end
-  
-  sleep 8
-  
-  live_loop :guitar do
-    guitar_sample = "C:/Users/salvador_rojas/Documents/guitar_sample.wav"
-    sample guitar_sample, amp: 0.7
-    sleep 4
-  end
-  
-  sleep 8
-  
-amp_level = 1
+live_loop :bass do
+  use_synth :bass_foundation
+  measure1
+end
+
+sleep 8
+
+live_loop :piano do
+  use_synth :piano
+  measure2
+  stop
+end
+
+sleep 8
+
+live_loop :bell do
+  use_synth :dull_bell
+  array
+end
+
+sleep 8
+
+live_loop :guitar do
+  guitar_sample = "C:/Users/salvador_rojas/Documents/guitar_sample.wav"
+  sample guitar_sample, amp: 0.7
+  sleep 4
+end
+
+sleep 8
+
+amp_level = 0.7
 
 7.times do
   sample :ambi_choir, amp: amp_level
