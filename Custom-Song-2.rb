@@ -1,4 +1,18 @@
 use_bpm 120
+
+idiotaintro = "C:/Users/salvador_rojas/Downloads/idiotaintro.wav"
+sample idiotaintro
+sleep 32
+
+tatuajesintro = "C:/Users/salvador_rojas/Downloads/tatuajesintro.wav"
+sample tatuajesintro
+sleep 32
+
+sentimentalintro = "C:/Users/salvador_rojas/Downloads/sentimentalintro.wav"
+sample sentimentalintro
+sleep 16
+
+
 use_synth_defaults release: 0.8
 
 # LEFT HAND (bass / arpeggio intro + support)
@@ -27,7 +41,13 @@ live_loop :left_hand do
   sleep 2  # aligns with LH intro
   
   # First chord hit
-  play_chord [:d4, :f4, :a4], sustain: 0.5
+  #play_chord [:d4, :f4, :a4], sustain: 0.5
+  # sleep 0.5
+  play :d4, sustain: 0.5
+  sleep 0.5
+  play :f4, sustain: 0.5
+  sleep 0.5
+  play :a4, sustain: 0.5
   sleep 0.5
   
 end
@@ -36,48 +56,110 @@ live_loop :right_hand do
   # RIGHT HAND (melody + chords)
   use_synth :piano
   #Moving chord tones (matches grouped notes)
-  play_pattern_timed [:e4, :f4, :a4, :f4], [0.25]
+  #play_pattern_timed [:e4, :f4, :a4, :f4], [0.25]
+  play :e4
+  sleep 0.25
+  play :f4
+  sleep 0.25
+  play :a4
+  sleep 0.25
+  play :f4
+  sleep 0.25
   
-  play_chord [:f4, :a4, :c5], sustain: 0.5
+  #play_chord [:f4, :a4, :c5], sustain: 0.5
+  #sleep 0.5
+  play :f4, sustain: 0.5
+  sleep 0.5
+  play :a4, sustain: 0.5
+  sleep 0.5
+  play :c5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #sleep 0.5
+  play :g4, sustain: 0.5
+  sleep 0.5
+  play :bb4, sustain: 0.5
+  sleep 0.5
+  play :d5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:a4, :c5, :e5], sustain: 0.5
+  #play_chord [:a4, :c5, :e5], sustain: 0.5
+  #sleep 0.5
+  play :a4, sustain: 0.5
+  sleep 0.5
+  play :c5, sustain: 0.5
+  sleep 0.5
+  play :e5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:g4, :bb4, :d5], sustain: 0.5
+  # play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #sleep 0.5
+  play :g4, sustain: 0.5
+  sleep 0.5
+  play :bb4, sustain: 0.5
+  sleep 0.5
+  play :d5, sustain: 0.5
   sleep 0.5
   
   # Final held chord (matches tied ending)
-  play_chord [:d4, :f4, :a4], sustain: 0.5
+  #play_chord [:d4, :f4, :a4], sustain: 0.5
+  play :d4, sustain: 0.5
+  play :f4, sustain: 0.5
+  play :a4, sustain: 0.5
   
-  play_pattern_timed [:e4, :f4, :a4, :f4], [0.25]
-  #play :e4
-  #sleep 0.25
-  #play :f4
-  #sleep 0.25
-  #play :a4
-  #sleep 0.25
-  #play :f4
-  #sleep 0.25
+  #play_pattern_timed [:e4, :f4, :a4, :f4], [0.25]
+  play :e4
+  sleep 0.25
+  play :f4
+  sleep 0.25
+  play :a4
+  sleep 0.25
+  play :f4
+  sleep 0.25
   
   
-  play_chord [:f4, :a4, :c5], sustain: 0.5
+  #play_chord [:f4, :a4, :c5], sustain: 0.5
+  #sleep 0.5
+  play :f4, sustain: 0.5
+  sleep 0.5
+  play :a4, sustain: 0.5
+  sleep 0.5
+  play :c5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #sleep 0.5
+  play :g4, sustain: 0.5
+  sleep 0.5
+  play :bb4, sustain: 0.5
+  sleep 0.5
+  play :d5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:a4, :c5, :e5], sustain: 0.5
+  #play_chord [:a4, :c5, :e5], sustain: 0.5
+  #sleep 0.5
+  play :a4, sustain: 0.5
+  sleep 0.5
+  play :c5, sustain: 0.5
+  sleep 0.5
+  play :e5, sustain: 0.5
   sleep 0.5
   
-  play_chord [:g4, :bb4, :d5], sustain: 0.5
+  #play_chord [:g4, :bb4, :d5], sustain: 0.5
+  # sleep 0.5
+  play :g4, sustain: 0.5
+  sleep 0.5
+  play :bb4, sustain: 0.5
+  sleep 0.5
+  play :d5, sustain: 0.5
   sleep 0.5
   
   # Final held chord (matches tied ending)
-  play_chord [:d4, :f4, :a4], sustain: 0.5
+  #play_chord [:d4, :f4, :a4], sustain: 0.5
+  play :d4, sustain: 0.5
+  play :f4, sustain: 0.5
+  play :a4, sustain: 0.5
   
   stop
 end
